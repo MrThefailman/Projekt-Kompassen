@@ -115,3 +115,9 @@ body {
 .no-hover{
     cursor:inherit;
 }
+.hide-li{
+    display:none;
+}
+.show-li{
+    display:block;
+}
