@@ -24,12 +24,13 @@ namespace WU16.Kompassen.Web
                       "~/scripts/bootstrap.js",
                       "~/scripts/respond.js"));
 
-            //bundles.Add(new ScriptBundle("~/bundles/app").Include(
-            //          "~/scripts/core/utilities.js",
-            //          "~/scripts/core/page.js",
-            //          "~/scripts/core/app.js",
-            //          "~/scripts/core/eventhandlers.js",
-            //          "~/scripts/core/waiting-dialog.js"));
+            bundles.Add(new ScriptBundle("~/bundles/app").Include(
+                     "~/scripts/core/menu.js"));
+                    // "~/scripts/core/utilities.js",
+                    //  "~/scripts/core/page.js",
+                    // "~/scripts/core/app.js",
+                    // "~/scripts/core/eventhandlers.js",
+                    // "~/scripts/core/waiting-dialog.js"
 
             bundles.Add(new StyleBundle("~/style/css").Include(
                       "~/style/bootstrap.css",

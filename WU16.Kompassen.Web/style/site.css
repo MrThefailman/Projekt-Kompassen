@@ -28,27 +28,32 @@ body {
     line-height: 20px;
 }
 
-.navbar-inverse .navbar-nav > .active > a,
-.navbar-inverse .navbar-nav > .active > a:hover,
+.navbar-inverse .navbar-nav > .active > a
+{
+    color: #ffffff;
+    background-color: #5cb85c;
+}
 .navbar-inverse .navbar-nav > .active > a:focus {
     color: #ffffff;
     background-color: #5cb85c;
 }
-
-.course-item-info {
-    padding-top: 15px;
-    padding-bottom: 20px;
-    font-style: italic;
-    font-size: 16px;
-}
+.navbar-inverse .navbar-nav > .active > a:hover {
+    color: #ffffff;
+    background-color: #428bca;
+    }
+    .course-item-info {
+        padding-top: 15px;
+        padding-bottom: 20px;
+        font-style: italic;
+        font-size: 16px;
+    }
 
 .container {
     padding-right: 15px;
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
-    margin-right: 0;
-    margin-left: 0;
+    
 }
 
 .input-group .form-control {
@@ -77,13 +82,13 @@ body {
     left: 0;
     margin-right: auto;
     margin-left: auto;
-    bottom: 0px;
+    
 }
 
 /* The course listing page. */
 .form-input-container {
     padding: 5px;
-    margin: 0px;
+    
 }
 
 #studentsOptionList {
@@ -115,9 +120,7 @@ body {
 .no-hover{
     cursor:inherit;
 }
-.hide-li{
-    display:none;
-}
-.show-li{
+.show{
     display:block;
+
 }

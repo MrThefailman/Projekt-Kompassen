@@ -158,7 +158,7 @@
     <Content Include="scripts\jquery.validate.min.js" />
     <Content Include="scripts\jquery.validate.unobtrusive.js" />
     <Content Include="scripts\jquery.validate.unobtrusive.min.js" />
-    <Content Include="scripts\menu.js" />
+    <Content Include="scripts\core\menu.js" />
     <Content Include="scripts\modernizr-2.8.3.js" />
     <Content Include="scripts\respond.js" />
     <Content Include="scripts\respond.matchmedia.addListener.js" />

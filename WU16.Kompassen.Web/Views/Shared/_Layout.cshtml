@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="compass@2x.png">
-    <link href="~/style/site.css" rel="stylesheet" />
+    
     @Styles.Render("~/style/css")
 </head>
 <body>
@@ -21,9 +21,8 @@
     @Scripts.Render("~/bundles/jquerylibs")
     @Scripts.Render("~/bundles/bootstrap")
     @Scripts.Render("~/bundles/modernizr")
-    @*@Scripts.Render("~/bundles/app")*@
+    @Scripts.Render("~/bundles/app")
     @RenderSection("scripts", required: false)
     
-    <script src="~/scripts/menu.js"></script>
 </body>
 </html>
