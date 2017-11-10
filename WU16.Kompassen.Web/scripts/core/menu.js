@@ -48,15 +48,4 @@
 
     });
 
-    $("#addCourse").on("mouseenter", function (event) {
-
-        $(this).css("background-color", "#5cb85c");
-    });
-
-    $("#addCourse").on("mouseleave", function (event) {
-
-        $(this).css("background-color", "#428bca");
-
-    });
-
 });
