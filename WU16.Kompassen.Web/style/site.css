@@ -120,7 +120,11 @@ body {
 .no-hover{
     cursor:inherit;
 }
-.show{
-    display:block;
-
+.hide-li {
+    display: none;
 }
+
+.show-li {
+    display: block;
+}
+
