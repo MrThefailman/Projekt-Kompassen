@@ -1,19 +1,21 @@
-﻿$(function () {
-
-
-   
+﻿
+$(function () {
 
     $("#courses").click(function () {
-        $("#courseListPlaceholder").show();
-        $("#studentListPlaceholder").hide();
-        
+        $("#containerCourseList").show();
+        $("#containerStudentList").hide();
+        $("#courseDetailsForm").hide();
 
-        $("#students").click(function () {
-            $("#studentListPlaceholder").show();
-            $("#courseListPlaceholder").hide();
-            
+    });
 
-        });
+    $("#students").click(function () {
+        $("#containerStudentList").show();
+        $("#containerCourseList").hide();
+        $("#courseDetailsForm").hide();
 
+    });
+
+    $(".toggleAddToCourse").click(function () {
+        $("#courseDetailsForm").toggle();
     });
 });

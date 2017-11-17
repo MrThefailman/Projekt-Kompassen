@@ -4,8 +4,13 @@
 
     <div id="defaultPlaceholder"></div>
 
+    <script src="~/scripts/core/menu.js"></script>
+
+
     @*The default view. A list of all courses and students.*@
-<div id="courseDetailsPlaceholder" class="hide-li"  style="max-width: 810px ;">
+
+
+<div id="containerCourseDetails" class="hide-li"  style="max-width: 810px ;">
     <form id="courseDetailsForm">
         <input type="hidden" name="id" value="0" />
 
@@ -78,6 +83,7 @@
                     <button type="submit" class="btn btn-success">Spara</button>
                     <button type="button" id="courseDetailsCancelButton" class="btn btn-warning">Stäng</button>
                 </div>
+               
 
             </div>
         </div>
@@ -86,7 +92,7 @@
 </div>
 
 @*A list of all courses.*@
-<div class="hide-li" id="courseListPlaceholder" >
+<div class="hide-li" id="containerCourseList" >
 
     <div class="panel panel-default">
         <div class="panel-heading" style="overflow: auto">
@@ -143,12 +149,18 @@
                 @*Content rows*@
             </tbody>
         </table>
+
+        @*Button for adding student to course*@
+        <div class="addButton">
+            <input class="toggleAddToCourse" type="button" value="button" />
+        </div>
+
     </div>
 
 </div>
 
 @*A list of all students.*@
-<div class="hide-li" id="studentListPlaceholder" >
+<div class="hide-li" id="containerStudentList" >
 
     <div class="panel panel-default">
         <div class="panel-heading" style="overflow: auto">
@@ -223,6 +235,13 @@
                 @*Content rows*@
             </tbody>
         </table>
+
+        @*Button for adding student to course*@
+        <div class="addButton">
+            <input class="toggleAddToCourse" type="button" value="button" />
+        </div>
+
     </div>
 
 </div>
+
