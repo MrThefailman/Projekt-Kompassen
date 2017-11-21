@@ -26,7 +26,7 @@ namespace WU16.Kompassen.Web.API
         {
             Course courseToUpdate = null;
 
-            if (course.Id > 0)
+            if (course.Id > 0) 
             {
                 courseToUpdate = db.Courses.Include(x => x.Students).First(i => i.Id == course.Id);
             }
