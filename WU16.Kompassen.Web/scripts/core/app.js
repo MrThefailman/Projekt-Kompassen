@@ -1,8 +1,6 @@
 ﻿
 $(function () {
 
-
-
     $.fn.serializeObject = function () {
         var o = {};
         var a = this.serializeArray();
@@ -18,6 +16,8 @@ $(function () {
         });
         return o;
     };
+
+    
 
     var url = "http://localhost:45959/api/courses"; // Hänvisar till vilken URL vi ska hämta informationen ifrån gällande db.
 
@@ -82,10 +82,14 @@ $(function () {
             'url': url,
             'data': JSON.stringify($("#courseListAddCourseForm").serializeObject()),
             'success': function (data) {
+
+                
                 //debugger;
-                alert("Item has been saved.");
+                //alert("Item has been saved.");
                 //console.log(data.Name);
+                
             }
+             
         });
 
     });
