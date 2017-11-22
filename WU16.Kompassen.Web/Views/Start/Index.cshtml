@@ -10,8 +10,20 @@
     @*The default view. A list of all courses and students.*@
 
 
-<div id="containerCourseDetails" class="hide-li"  style="max-width: 810px ;">
-    <form id="courseDetailsForm">
+    <div id="containerStartView" style="max-width: 810px;">
+
+        <form id="startViewForm">
+            <div class="panel panel-default">
+               <div class="studentsButton" style="width: 41%; height: 250px; float: left; background:; background-size: "></div>
+                <div class="coursesButton" style="width: 41%; height: 250px; float: left; background-image: "></div>
+            </div>
+        </form>
+    </div>
+
+
+@*This will be hidden*@
+<div class="hide-li containerCourseDetails"  style="max-width: 810px ;">
+    <form class="courseDetailsForm"style="display:none">
         <input type="hidden" name="id" value="0" />
 
         <div class="panel panel-default">
@@ -59,8 +71,7 @@
                         <div>
                             <p>Studenter</p>
 
-                            @*Add new
-                            <div>*@
+                            @*Add new <div>*@
                             <div style="float: left; padding: 3px; padding-left: 0;">
                                 <select class="form-control" id="courseDetailsStudentSelectList"></select>
                             </div>
@@ -133,9 +144,12 @@
                     <label>&nbsp;</label>
                     <br />
                     <button type="submit" class="btn btn-success">Spara</button>
+                    <button type="button" class="toggleAddToCourse btn btn-primary">Lägg till student till kurs</button>
                 </div>
             </form>
         </div>
+        
+        <div class="someClass"></div>
 
         <table id="courseListTable" class="table">
             <thead>
@@ -150,10 +164,7 @@
             </tbody>
         </table>
 
-        @*Button for adding student to course*@
-        <div class="addButton">
-            <input class="toggleAddToCourse" type="button" value="button" />
-        </div>
+        
 
     </div>
 
@@ -198,9 +209,12 @@
                     <br />
                     <button type="submit" class="btn btn-success">Spara</button>
                     <button type="reset" class="btn btn-success">Rensa</button>
+                    <button type="button" class="toggleAddToCourse btn btn-primary">Lägg till student till kurs</button>
                 </div>
             </form>
         </div>
+
+        <div class="someClass"></div>
 
         @*The search*@
         <div class="panel-body">
@@ -215,9 +229,12 @@
                     <label>&nbsp;</label>
                     <br />
                     <button type="submit" class="btn btn-success">Sök</button>
+                    <br />
+                    
                 </div>
             </form>
         </div>
+       
 
          @*The actual list of students*@
         <table id="studentListTable" class="table">
@@ -236,10 +253,7 @@
             </tbody>
         </table>
 
-        @*Button for adding student to course*@
-        <div class="addButton">
-            <input class="toggleAddToCourse" type="button" value="button" />
-        </div>
+        
 
     </div>
 
