@@ -46,15 +46,12 @@ $(function () {
 
         // Hänvisar till vilken URL vi ska hämta informationen ifrån gällande db.
 
-        // .get hämtar URL:en.
         $.get(url, function (data) {
 
             // .each går genom alla kurser som finns i SQL.
             $.each(data, function (i, course) {
-                $("#courseListPlaceholder", function () {
-                    $("#nameCol").append("<a href='#' class='list-group-item'>" + "<b>" + course.name + "</b>");
-                    $("#pointCol").append("<span class='list-group-item'>" + "<b>" + course.credits + "</b></span>");
-                    $("#numCol").append("<span class='list-group-item'>" + "<b>" + course.students.length + "</b></span>"); // Hämta Studenter istället
+                $("#courseListTable > .courseList", function () {
+                    $(".courseList").append("<tr><td>" + course.name + "</td><td>" + course.credits + "</td><td>" + course.students.length + "</td><td>" + "<button type='button' class='btn btn-primary'>Edit</button>" + "</td></tr>");
 
                 });
 
@@ -69,7 +66,7 @@ $(function () {
 
 
 
-    $("#saveCourse").on("click", function (event) {
+    $("#saveCourse").on('click', function (event) {
 
         event.preventDefault();
 
