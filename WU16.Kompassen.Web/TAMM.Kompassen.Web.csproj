@@ -190,6 +190,10 @@
     <Content Include="Content\themes\base\tooltip.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <None Include="scripts\jquery-3.2.1.intellisense.js" />
+    <Content Include="Photos\course-512.png" />
+    <Content Include="Photos\Icons8-Ios7-Science-Courses.ico" />
+    <Content Include="Photos\Student-3-icon.png" />
+    <Content Include="Photos\student-read-book-high-education-school-512.png" />
     <Content Include="scripts\core\search.js" />
     <Content Include="scripts\jquery-3.2.1.js" />
     <Content Include="scripts\jquery-3.2.1.min.js" />
@@ -251,7 +255,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Photos\" />
     <Folder Include="Views\SearchStudents\" />
   </ItemGroup>
   <ItemGroup>
