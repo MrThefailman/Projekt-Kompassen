@@ -22,6 +22,7 @@ namespace WU16.Kompassen.Web.API
             return db.Courses.Include(x => x.Students).FirstOrDefault(x => x.Id == id);
         }
 
+        
         public string Post(Course course)
         {
             Course courseToUpdate = null;

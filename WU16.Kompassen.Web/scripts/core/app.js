@@ -1,9 +1,8 @@
 ﻿
-
 $(function () {
 
 
-    
+
     $.fn.serializeObject = function () {
         var o = {};
         var a = this.serializeArray();
@@ -45,8 +44,8 @@ $(function () {
 
         });
 
-         // Hänvisar till vilken URL vi ska hämta informationen ifrån gällande db.
-        
+        // Hänvisar till vilken URL vi ska hämta informationen ifrån gällande db.
+
         // .get hämtar URL:en.
         $.get(url, function (data) {
 
@@ -57,42 +56,40 @@ $(function () {
                     $("#pointCol").append("<span class='list-group-item'>" + "<b>" + course.credits + "</b></span>");
                     $("#numCol").append("<span class='list-group-item'>" + "<b>" + course.students.length + "</b></span>"); // Hämta Studenter istället
 
-                }); 
-
-                
-
                 });
 
+
+
             });
-    
+
+        });
+
     });
 
 
-   
 
-    $("#saveCourse").submit(function (event) {
-       
-        
 
-        $.ajax({
-             headers: {
-            Accept: 'application/json; charset=UTF-8',
-                ContentType: 'application/json; charset=UTF-8'
-        },
-            type: 'POST',
-            url: url,
-            data: JSON.stringify($("#courseListAddCourseForm").serializeObject()),
-            success: function (data) {
-                //debugger;
-                alert("Item has been saved.");
-               // alert(data.name);
-            }
-            
-        });
+    $("#saveCourse").on("click", function (event) {
+
         event.preventDefault();
 
+        $.ajax({
+            headers: {
+                'Accept': 'application/json; charset=utf-8',
+                'Content-Type': 'application/json; charset=utf-8'
+            },
+            'type': 'POST',
+            'url': url,
+            'data': JSON.stringify($("#courseListAddCourseForm").serializeObject()),
+            'success': function (data) {
+                //debugger;
+                alert("Item has been saved.");
+                //console.log(data.Name);
+            }
+        });
+
     });
 
-    
+
 
 });
