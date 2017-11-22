@@ -192,6 +192,7 @@
     <None Include="scripts\jquery-3.2.1.intellisense.js" />
     <Content Include="scripts\core\app.js" />
     <Content Include="scripts\core\page.js" />
+    <Content Include="scripts\core\Student.js" />
     <Content Include="scripts\core\utilities.js" />
     <Content Include="scripts\jquery-3.2.1.js" />
     <Content Include="scripts\jquery-3.2.1.min.js" />

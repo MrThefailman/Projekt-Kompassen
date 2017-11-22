@@ -91,8 +91,8 @@
 
     <div class="panel panel-default">
         <div class="panel-heading" style="overflow: auto">
-            <div style="float: left; overflow: auto">Kurser</div>
-            <div style="float: right; overflow: auto">+</div>
+            <div style="float: left; overflow: auto"><h3><b>Kurser</b></h3></div>
+           
         </div>
 
         <div class="panel-body">
@@ -155,13 +155,14 @@
 
     <div class="panel panel-default">
         <div class="panel-heading" style="overflow: auto">
-            <div style="float: left; overflow: auto">Studenter</div>
+            <div style="float: left; overflow: auto"><h3><b>Studenter</b></h3></div>
 
-            <div style="float: right; overflow: auto">+</div>
+            
         </div>
 
         @*The add new or edit student form*@
         <div class="panel-body">
+            <h4><span class="glyphicon glyphicon-plus no-hover"></span>&nbsp;Lägg till ny student</h4>
             <form id="studentListAddStudentForm">
                 <input type="hidden" name="id" value="0" />
                 <input type="hidden" name="active" value="false" />
@@ -187,21 +188,23 @@
                 <div class="form-group form-input-container" style="float: left;">
                     <label>&nbsp;</label>
                     <br />
-                    <button type="submit" class="btn btn-success">Spara</button>
-                    <button type="reset" class="btn btn-success">Rensa</button>
+                    <button type="submit" id="savestudent" class="btn btn-success">Spara</button>
+                    <button type="reset" id="clean" class="btn btn-success">Rensa</button>
                 </div>
             </form>
         </div>
 
         @*The search*@
         <div class="panel-body">
+            <h4><span class="glyphicon glyphicon-search no-hover"></span>&nbsp;Sök efter student</h4>
             <form id="searchStudentForm">
+
                 <div class="form-group form-input-container" style="float: left;">
                     <label>&nbsp;</label>
                     <br />
                     <input type="text" name="searchCriteria" class="form-control" />
                 </div>
-
+               
                 <div class="form-group form-input-container" style="float: left;">
                     <label>&nbsp;</label>
                     <br />
