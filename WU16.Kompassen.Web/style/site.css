@@ -17,9 +17,10 @@ body {
         color: #fff;
     }
 
-.navbar {
-    min-height: 55px;
-}
+    /* :hover är tillagt för att ändra bakgrundsfärg i navbar. */
+    .navbar-inverse .navbar-nav > li > a:hover { 
+        background-color: #5cb85c;
+    }
 
 .navbar-brand {
     float: left;
@@ -118,7 +119,7 @@ body {
 }
 
 .no-hover{
-    cursor:inherit;
+    cursor: inherit;
 }
 .hide-li {
     display: none;
