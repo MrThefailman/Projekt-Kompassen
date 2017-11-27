@@ -13,3 +13,7 @@
     });
     return o;
 };
+
+$(function () {
+
+});
