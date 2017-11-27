@@ -19,7 +19,7 @@ body {
     .navbar-inverse .navbar-nav > li > a:hover {
             background-color: #5cb85c;
     }
-            .navbar {
+    .navbar {
     min-height: 55px;
 }
 
@@ -49,6 +49,24 @@ body {
         font-style: italic;
         font-size: 16px;
     }
+
+/*Kan behövas Något mer*/
+nav a:hover {
+    color: #444;
+}
+
+nav a::before {
+    content: '';
+    display: block;
+    height: 5px;
+    background-color: #5cb85c;
+    position: absolute;
+    transition: all ease-in-out 250ms;
+}
+
+nav a:hover::before {
+    width: 100%;
+}
 
 .container {
     padding-right: 15px;
