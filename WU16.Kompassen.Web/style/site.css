@@ -16,8 +16,10 @@ body {
     .navbar-inverse .navbar-nav > li > a {
         color: #fff;
     }
-
-.navbar {
+    .navbar-inverse .navbar-nav > li > a:hover {
+            background-color: #5cb85c;
+    }
+            .navbar {
     min-height: 55px;
 }
 

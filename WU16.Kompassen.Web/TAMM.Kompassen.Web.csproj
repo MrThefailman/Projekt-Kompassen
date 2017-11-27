@@ -191,7 +191,8 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <None Include="scripts\jquery-3.2.1.intellisense.js" />
     <Content Include="scripts\core\app.js" />
-    <Content Include="scripts\core\search.js" />
+    <Content Include="scripts\core\start.js" />
+    <Content Include="scripts\core\utilities.js" />
     <Content Include="scripts\jquery-3.2.1.js" />
     <Content Include="scripts\jquery-3.2.1.min.js" />
     <Content Include="scripts\jquery-3.2.1.slim.js" />
@@ -203,7 +204,7 @@
     <Content Include="scripts\jquery.validate.min.js" />
     <Content Include="scripts\jquery.validate.unobtrusive.js" />
     <Content Include="scripts\jquery.validate.unobtrusive.min.js" />
-    <Content Include="scripts\core\menu.js" />
+    <Content Include="scripts\core\page.js" />
     <Content Include="scripts\modernizr-2.8.3.js" />
     <Content Include="scripts\respond.js" />
     <Content Include="scripts\respond.matchmedia.addListener.js" />
