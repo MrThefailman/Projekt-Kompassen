@@ -69,11 +69,13 @@ $(function () {
                                  
 
                         $("#courseDetailsPlaceholder").show();
+
+
                             $.get("/api/course", function (data) {
                                                                 
                                 $.each(data, function (i, course) {
                                     
-                                    $("#cName").val(course.name);
+                                    
 
                                 });
                             });
@@ -110,9 +112,7 @@ $(function () {
             'success': function (data) {
 
                 
-                //debugger;
-                //alert("Item has been saved.");
-                //console.log(data.Name);
+                
                 
             }
              
