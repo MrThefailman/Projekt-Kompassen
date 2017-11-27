@@ -13,7 +13,7 @@ $(function () {
         $("#containerCourseList").show();
         $("#containerStudentList").hide();
         $(".courseDetailsForm").hide();
-        $(".toggleAddToCourse").show();
+        $(".toggleAddToCourseCourses").show();
 
     });
 
@@ -21,21 +21,46 @@ $(function () {
         $("#containerStudentList").show();
         $("#containerCourseList").hide();
         $(".courseDetailsForm").hide();
-        $(".toggleAddToCourse").show();
+        $(".toggleAddToCourseStudents").show();
 
     });
 
-    $(".toggleAddToCourse").click(function () {
-        $(".toggleAddToCourse").hide();
-        if ($(".someClass").html() == "")
+    //lägg till studenter (i Studenter)
+    $(".toggleAddToCourseStudents").click(function () {
+        $(".toggleAddToCourseStudents").hide();
+        if ($("#someIdStudents").html() === "")
         {
-            $(".someClass").html($(".containerCourseDetails").html());
-            $(".containerCourseDetails").html("");
+            $("#someIdStudents").html($(".containerCourseDetails").html());
+            $(".containerCourseDetails").empty();
+            $("#someIdCourses").empty();
             
         }
-        console.log($(".containerCourseDetails"));
+        
         $(".courseDetailsForm").show();
+        //$("html, body").animate({ scrollTop: $("#someIdStudents").height() -$(window) }, 1000);
 
+    });
+
+    //Lägg till Studenter (i kurser)
+    $(".toggleAddToCourseCourses").click(function () {
+        $(".toggleAddToCourseCourses").hide();
+        if ($("#someIdCousrses").html() === "")
+        {
+            $("#someIdCourses").html($(".containerCourseDetails").html());
+            $(".containerCourseDetails").empty();
+            $("#someIdStudents").empty();
+
+        }
+
+        $(".courseDetailsForm").show();
+        //$("html, body").animate({ scrollTop: $("#someIdCourses").height() -$(window) }, 1000);
+
+    });
+
+    $(".courseDetailsCancelButton").click(function () {
+        alert("Alert");
+        $(".courseDetailsForm").hide();
+        
     });
 
 });

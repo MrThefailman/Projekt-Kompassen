@@ -15,7 +15,7 @@
 
         <div class="panel panel-default">
             <div class="panel-heading">
-                <h3 class="panel-title"><span name="title"></span></h3>
+                <h4><span class="glyphicon glyphicon-plus no-hover"></span>&nbsp;Lägg till elev i kurs</h4>
             </div>
             <div class="panel-body">
 
@@ -36,6 +36,8 @@
                                 <option value="2015">2015</option>
                                 <option value="2016">2016</option>
                                 <option value="2017">2017</option>
+                                <option value="2018">2018</option>
+                                <option value="2019">2019</option>
                             </select>
                         </div>
 
@@ -79,7 +81,7 @@
 
                 <div style="clear: both; padding: 10px; padding-top: 0px;">
                     <button type="submit" class="btn btn-success">Spara</button>
-                    <button type="button" id="courseDetailsCancelButton" class="btn btn-warning">Stäng</button>
+                    <button type="button" class="courseDetailsCancelButton btn btn-danger">Stäng</button>
                 </div>
                
 
@@ -131,12 +133,12 @@
                     <label>&nbsp;</label>
                     <br />
                     <button type="submit" class="btn btn-success">Spara</button>
-                    <button type="button" class="toggleAddToCourse btn btn-primary">Lägg till student till kurs</button>
+                    <button type="button" class="toggleAddToCourseCourses btn btn-primary">Lägg till student till kurs</button>
                 </div>
             </form>
         </div>
         
-        <div class="someClass"></div>
+        <div id="someIdCourses"></div>
 
         <table id="courseListTable" class="table">
             <thead>
@@ -150,8 +152,6 @@
                 @*Content rows*@
             </tbody>
         </table>
-
-        
 
     </div>
 
@@ -195,13 +195,13 @@
                     <label>&nbsp;</label>
                     <br />
                     <button type="submit" class="btn btn-success">Spara</button>
-                    <button type="reset" class="btn btn-success">Rensa</button>
-                    <button type="button" class="toggleAddToCourse btn btn-primary">Lägg till student till kurs</button>
+                    <button type="reset" class="btn btn-warning">Rensa</button>
+                    <button type="button" class="toggleAddToCourseStudents btn btn-primary">Lägg till student till kurs</button>
                 </div>
             </form>
         </div>
 
-        <div class="someClass"></div>
+       
 
         @*The search*@
         <div class="panel-body">
@@ -221,6 +221,8 @@
                 </div>
             </form>
         </div>
+
+        <div id="someIdStudents"></div>
        
 
          @*The actual list of students*@
