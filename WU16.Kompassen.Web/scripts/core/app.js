@@ -42,9 +42,23 @@ $(function () {
                                 + "</td><td>" + "<button type='button' class='btn btn-primary'name=" + "'"
                                 + course.id + "'" + ">Edit</button>" + "</td></tr>");
 
+                            
                             $(".courseList tr td button").on('click', function () { // Edit Knappen För Kurser
+                                $("#courseDetailsPlaceholder").show();
+                                $.ajax({
+                                    type: "GET",
+                                    url: "/api/courses/" + cId
+                                }).done(function (data) {
 
-                                $("#courseDetailsPlaceholder").show(); // Visa Kursinformation i ett Formulär
+                                    var cId = $(this).attr("data-id");
+                                    $("#courseListAddCourseForm :input[name='idnumber']").val(course.id);
+                                    $("#courseListAddCourseForm :input[name='name']").val(course.name);
+                                    $("#courseListAddCourseForm :input[name='credits']").val(course.credits);
+                                    $("#courseListAddCourseForm :input[name='year']").val(course.year);
+                                    $("#courseListAddCourseForm :input[name='term']").val(course.term);
+                                    $("#courseListAddCourseForm :input[name='active']").val(course.active);
+                                });
+                                 // Visa Kursinformation i ett Formulär
 
                             });
                         });
