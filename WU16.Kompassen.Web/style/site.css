@@ -50,23 +50,7 @@ body {
         font-size: 16px;
     }
 
-/*Kan behövas Något mer*/
-nav a:hover {
-    color: #444;
-}
 
-nav a::before {
-    content: '';
-    display: block;
-    height: 5px;
-    background-color: #5cb85c;
-    position: absolute;
-    transition: all ease-in-out 250ms;
-}
-
-nav a:hover::before {
-    width: 100%;
-}
 
 .container {
     padding-right: 15px;
@@ -146,5 +130,8 @@ nav a:hover::before {
 
 .show-li {
     display: block;
+}
+.mt {
+    margin-bottom: 10px;
 }
 
