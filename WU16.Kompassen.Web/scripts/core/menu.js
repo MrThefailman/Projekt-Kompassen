@@ -2,6 +2,8 @@
 $(function () {
 
     $("#start").click(function () {
+        $(".navbar-nav li").parent().find('li').removeClass("active");
+        $(this).addClass("active");
         $("#containerCourseList").hide();
         $("#containerStudentList").hide();
         $(".courseDetailsForm").hide();
@@ -10,6 +12,8 @@ $(function () {
     });
 
     $("#courses").click(function () {
+        $(".navbar-nav li").parent().find('li').removeClass("active");
+        $(this).addClass("active");
         $("#containerCourseList").show();
         $("#containerStudentList").hide();
         $(".courseDetailsForm").hide();
@@ -18,48 +22,29 @@ $(function () {
     });
 
     $("#students").click(function () {
+        $(".navbar-nav li").parent().find('li').removeClass("active");
+        $(this).addClass("active");
         $("#containerStudentList").show();
         $("#containerCourseList").hide();
         $(".courseDetailsForm").hide();
-        $(".toggleAddToCourseStudents").show();
+        $(".toggleAddToCourse").hide();
 
     });
 
-    //lägg till studenter (i Studenter)
-    $(".toggleAddToCourseStudents").click(function () {
-        $(".toggleAddToCourseStudents").hide();
-        if ($("#someIdStudents").html() === "")
-        {
-            $("#someIdStudents").html($(".containerCourseDetails").html());
-            $(".containerCourseDetails").empty();
-            $("#someIdCourses").empty();
-            
-        }
-        
-        $(".courseDetailsForm").show();
-        //$("html, body").animate({ scrollTop: $("#someIdStudents").height() -$(window) }, 1000);
-
-    });
-
-    //Lägg till Studenter (i kurser)
+    //Redigera kurser (i kurser)
     $(".toggleAddToCourseCourses").click(function () {
-        $(".toggleAddToCourseCourses").hide();
-        if ($("#someIdCousrses").html() === "")
-        {
-            $("#someIdCourses").html($(".containerCourseDetails").html());
-            $(".containerCourseDetails").empty();
-            $("#someIdStudents").empty();
 
-        }
+        $(this).hide();
 
+        $("#containerCourseDetails").show();
         $(".courseDetailsForm").show();
-        //$("html, body").animate({ scrollTop: $("#someIdCourses").height() -$(window) }, 1000);
 
     });
 
     $(".courseDetailsCancelButton").click(function () {
-        alert("Alert");
+        
         $(".courseDetailsForm").hide();
+        $(".toggleAddToCourseCourses").show();
         
     });
 
