@@ -16,9 +16,8 @@
 
                 $(".courseList tr td button").on('click', function (e) {
                     
-                    e.preventDefault();
+                    e.preventDefault(e);
                     var cId = $(this).attr("data-id");
-                    var sC = [];
                     $.ajax({
                         type: "GET",
                         url: "/api/courses/" + cId
@@ -51,7 +50,7 @@
 
     // Posting New Courses
     $("#courseListAddCourseForm :button").on('click', function (e) {
-        e.preventDefault();
+        e.preventDefault(e);
         
 
         $.ajax({
@@ -71,6 +70,8 @@
                             $(".courseList").append("<tr><td>" + course.name + "</td><td>" + course.credits + "</td><td>" + course.students.length
                                 + "</td><td>" + "</td><td>" + course.year
                                 + "</td><td>" + "</td><td>" + course.term
+                                + "</td><td>" + "<button type='button' class='btn btn-default'data-id=" + "'"
+                                + course.active + "'" + ">Aktiv</button>"
                                 + "</td><td>" + "<button type='button' class='btn btn-warning'data-id=" + "'"
                                 + course.id + "'" + ">Redigera</button>" + "</td></tr>");
                         });
@@ -79,10 +80,12 @@
             }
         });
 
-        // Uppdate Courses
-        $("#courseDetailsForm > div > div.panel-body > div:nth-child(3) > button.btn.btn-success").on('click', function (e) {
-            alert('funkar');
+        // Uppdate Course Button
+        $("#courseDetailsForm button").on('click', function (e) {
             e.preventDefault();
+
+            alert("hej");
+            
 
             $.ajax({
                 headers: {
@@ -101,6 +104,8 @@
                                 $(".courseList").append("<tr><td>" + course.name + "</td><td>" + course.credits + "</td><td>" + course.students.length
                                     + "</td><td>" + "</td><td>" + course.year
                                     + "</td><td>" + "</td><td>" + course.term
+                                    + "</td><td>" + "<button type='button' class='btn btn-default'data-id=" + "'"
+                                    + course.active + "'" + ">Aktiv</button>"
                                     + "</td><td>" + "<button type='button' class='btn btn-warning'data-id=" + "'"
                                     + course.id + "'" + ">Redigera</button>" + "</td></tr>");
                             });
