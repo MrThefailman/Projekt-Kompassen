@@ -14,8 +14,7 @@
                     + course.id + "'" + ">Redigera</button>" + "</td></tr>");
 
 
-                $(".courseList tr td button").on('click', function (e) {
-
+                $(document).on('click', ".courseList tr td button", function (e) {
                     e.preventDefault(e);
                     var cId = $(this).attr("data-id");
                     $.ajax({
@@ -31,7 +30,7 @@
                         $("#courseDetailsPlaceholder :input[name='term']").val(c.term);
                         $("#courseDetailsPlaceholder :input[name='active']").val(c.active);
                     });
-                    window.scrollTo(0, 0);
+                    
                 });
                 // När du trycker på stäng döljs 
                 $('#courseDetailsCancelButton').on('click', function (e) {
