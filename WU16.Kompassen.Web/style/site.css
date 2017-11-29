@@ -114,8 +114,9 @@ body {
 }
 
 #studentListTable {
-    width: 775px;
+width: 775px;
 }
+
 
 .selected {
     border-left: 10px solid darkorange;
