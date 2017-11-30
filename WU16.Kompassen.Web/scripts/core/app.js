@@ -2,14 +2,16 @@
 
     // Edit Existing Courses
     $.get("/api/courses", function (data) {
-
+        
         $.each(data, function (i, course) {
+                        
             $("#courseListTable .courseList", function () {
-                $(".courseList").append("<tr><td>" + course.name + "</td><td>" + course.credits + "</td><td>" + course.students.length
+                $(".courseList").append("<tr><td>" + course.name + "</td><td>"
+                    + course.credits + "</td><td>" + course.students.length
                     + "</td><td>" + course.year
                     + "</td><td>" + course.term
-                    + "</td><td>" + "<button type='button' class='btn btn-default'data-id=" + "'"
-                    + course.active + "'" + ">Aktiv</button>"
+                    + "</td><td>" +"<button type='button' class='btn btn-danger'data-id=" + course.active
+                    + ">Inaktiv</button>"
                     + "</td><td>" + "<button type='button' class='btn btn-warning'data-id=" + "'"
                     + course.id + "'" + ">Redigera</button>" + "</td></tr>");
 
@@ -18,9 +20,9 @@
                     e.preventDefault(e);
                     var cId = $(this).attr("data-id");
                     $.ajax({
-                        type: "GET",
-                        url: "/api/courses/" + cId
-                    }).done(function (c, i) {
+                        type: 'GET',
+                        url: '/api/courses/' + cId
+                    }).done(function (c) {
                         $("#courseDetailsPlaceholder").show();
                         console.log("Course: " + c.name);
                         $("#courseDetailsPlaceholder :input[name='id']").val(c.id);
@@ -29,6 +31,9 @@
                         $("#courseDetailsPlaceholder :input[name='year']").val(c.year);
                         $("#courseDetailsPlaceholder :input[name='term']").val(c.term);
                         $("#courseDetailsPlaceholder :input[name='active']").val(c.active);
+
+                        // Fylla i Student rullen
+                        $("#courseDetailsStudentSelectList").append("<option>" + $(this).val("HEj") + "</option>");
                     });
                     
                 });
@@ -59,11 +64,12 @@
                 $.get("/api/courses", function (data) {
                     $.each(data, function (i, course) {
                         $("#courseListTable .courseList", function () {
-                            $(".courseList").append("<tr><td>" + course.name + "</td><td>" + course.credits + "</td><td>" + course.students.length
-                                + "</td><td>" + "</td><td>" + course.year
-                                + "</td><td>" + "</td><td>" + course.term
-                                + "</td><td>" + "<button type='button' class='btn btn-default'data-id=" + "'"
-                                + course.active + "'" + ">Aktiv</button>"
+                            $(".courseList").append("<tr><td>" + course.name + "</td><td>"
+                                + course.credits + "</td><td>" + course.students.length
+                                + "</td><td>" + course.year
+                                + "</td><td>" + course.term
+                                + "</td><td>" + "<button type='button' class='btn btn-danger'data-id=" + course.active
+                                + ">Inaktiv</button>"
                                 + "</td><td>" + "<button type='button' class='btn btn-warning'data-id=" + "'"
                                 + course.id + "'" + ">Redigera</button>" + "</td></tr>");
                         });
@@ -93,11 +99,12 @@
                 $.get("/api/courses", function (data) {
                     $.each(data, function (i, course) {
                         $("#courseListTable .courseList", function () {
-                            $(".courseList").append("<tr><td>" + course.name + "</td><td>" + course.credits + "</td><td>" + course.students.length
-                                + "</td><td>" + "</td><td>" + course.year
-                                + "</td><td>" + "</td><td>" + course.term
-                                + "</td><td>" + "<button type='button' class='btn btn-default'data-id=" + "'"
-                                + course.active + "'" + ">Aktiv</button>"
+                            $(".courseList").append("<tr><td>" + course.name + "</td><td>"
+                                + course.credits + "</td><td>" + course.students.length
+                                + "</td><td>" + course.year
+                                + "</td><td>" + course.term
+                                + "</td><td>" + "<button type='button' class='btn btn-danger'data-id=" + course.active
+                                + ">Inaktiv</button>"
                                 + "</td><td>" + "<button type='button' class='btn btn-warning'data-id=" + "'"
                                 + course.id + "'" + ">Redigera</button>" + "</td></tr>");
                         });
