@@ -4,23 +4,22 @@
 
     $.get("/api/students", "/api/courses", function (data) {
 
-       $.each(data, function (i, student,  course) {
+        $.each(data, function (i, student, course) {
             $("#studentListTable, .studentlist", function () {
                 $(".studentlist").append("<tr><td>" + student.firstName + "</td><td>" + student.lastName + "</td><td>" + student.ssn
-                    + "</td><td>" + "</td><td>" + courses.length + "<li>" + courses.Name + "<\/li>"
+                    + "</td><td>" + courses.length + "<li>" + courses.Name + "<\/li>" // courses.length och courses.name, vad har dem för funktion?
                     + "</td><td>" +
-                    "</td><td>" +
                     "<button type='button' class='btn btn-success toggleButtonActive' >Aktiv</button>"
-                    + "</td><td>" + "<button type='button' class='btn btn-warning 'data-id=" + "'"
-                    + "'" + ">Redigera</button>" + "</td></tr>");
+                    + "</td><td>"
+                    + "</td></tr>");
 
-           });
+            });
         });
 
 
-       $(document).on("click", ".toggleButtonActive", function () {
-            if ($(this).hasClass("btn-success")) {                
-               $(this).removeClass("btn-success");
+        $(document).on("click", ".toggleButtonActive", function () {
+            if ($(this).hasClass("btn-success")) {
+                $(this).removeClass("btn-success");
                 $(this).addClass("btn-danger").html("Inaktiv");
             } else {
                 $(this).removeClass("btn-danger").html("Inaktiv");
@@ -29,37 +28,42 @@
         });
 
 
-   });
+    });
 }
 
 $(document).ready(function () {
 
 
-Getstudents(); {
-    $(".studentlist :button[type='button']").on('Click', function (e) {
-        alert("FUNKAR");
-        e.preventDefault();
-        var cId = $(this).attr("data-id");
-        $.ajax({
-            type: "GET",
-            url: "/api/students/" + cId
-        }).done(function (c) {
-            alert("Student: " + c.name);
-            $("#studentListAddStudentForm :input[name='id']").val(c.id);
-            $("#studentListAddStudentForm :input[name='firstname']").val(c.firstname);
-            $("#studentListAddStudentForm :input[name='lastname']").val(c.lastname);
-            $("#studentListAddStudentForm :input[name='ssn']").val(c.ssn);
-            $("#studentListAddStudentForm :input[name='active']").val(c.active);
-            $("#studentListAddStudentForm :input[name='status']").val(c.status);
+    Getstudents(); {
+        $(".studentlist :button[type='button']").on('Click', function (e) {
+            alert("FUNKAR");
+            e.preventDefault();
+            var cId = $(this).attr("data-id");
+            $.ajax({
+                type: "GET",
+                url: "/api/students/" + cId
+            }).done(function (c) {
+                alert("Student: " + c.name);
+                $("#studentListAddStudentForm :input[name='id']").val(c.id);
+                $("#studentListAddStudentForm :input[name='firstname']").val(c.firstname);
+                $("#studentListAddStudentForm :input[name='lastname']").val(c.lastname);
+                $("#studentListAddStudentForm :input[name='ssn']").val(c.ssn);
+                $("#studentListAddStudentForm :input[name='active']").val(c.active);
+                $("#studentListAddStudentForm :input[name='status']").val(c.status);
+            });
         });
-    });
-}
+    }
 
-   //Posting new student
+
+
+
+
+
+    //Posting new student
     $("#studentListAddStudentForm :button").on('click', function (e) {
         e.preventDefault();
 
-       $.ajax({
+        $.ajax({
             headers: {
                 'Accept': 'application/json; charset=utf-8',
                 'Content-Type': 'application/json; charset=utf-8'
@@ -72,7 +76,7 @@ Getstudents(); {
                 $(".studentlist").empty();
                 Getstudents();
 
-           }
+            }
         });
     });
 

@@ -201,13 +201,13 @@
                     <label>&nbsp;</label>
                     <br />
                     <button type="submit" class="btn btn-success">Spara</button>
-                    <button type="reset" class="btn btn-success">Rensa</button>
+                    <!--<button type="reset" class="btn btn-success">Rensa</button>-->
                 </div>
             </form>
         </div>
 
         @*The search*@
-        @*<div class="panel-body">
+        <div class="panel-body" style="display: none">
             <form id="searchStudentForm">
                 <div class="form-group form-input-container" style="float: left;">
                     <label>&nbsp;</label>
@@ -221,7 +221,7 @@
                     <button type="submit" class="btn btn-success">Sök</button>
                 </div>
             </form>
-        </div>*@
+        </div>
 
         @*The actual list of students*@
         <table id="studentListTable" class="table">
@@ -230,12 +230,8 @@
                     <th>Förnamn</th>
                     <th>Efternamn</th>
                     <th>Personnummer</th>
-                    <th></th>
                     <th>Läser</th>
-                    <th></th>
                     <th>Status</th>
-                    <th>Redigera</th>
-                    <th></th>
                 </tr>
             </thead>
             <tbody class="studentlist">
