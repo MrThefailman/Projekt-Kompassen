@@ -4,17 +4,18 @@
     $.get("/api/courses", function (data) {
         
         $.each(data, function (i, course) {
-                        
+            
             $("#courseListTable .courseList", function () {
                 $(".courseList").append("<tr><td>" + course.name + "</td><td>"
                     + course.credits + "</td><td>" + course.students.length
                     + "</td><td>" + course.year
                     + "</td><td>" + course.term
-                    + "</td><td>" +"<button type='button' class='btn btn-danger'data-id=" + course.active
-                    + ">Inaktiv</button>"
+                    + "</td><td>" 
+                    + "</td><td>" + course.active
+                    + "</td><td>"
                     + "</td><td>" + "<button type='button' class='btn btn-warning'data-id=" + "'"
                     + course.id + "'" + ">Redigera</button>" + "</td></tr>");
-
+              
 
                 $(document).on('click', ".courseList tr td button", function (e) {
                     e.preventDefault(e);
@@ -34,9 +35,14 @@
 
                         // Fylla i Student rullen
                         $("#courseDetailsStudentSelectList").append("<option>" + $(this).val("HEj") + "</option>");
-                    });
-                    
+
+
+                        
+                        });
+
+                      
                 });
+                
                 // När du trycker på stäng döljs 
                 $('#courseDetailsCancelButton').on('click', function (e) {
                     $('#courseDetailsPlaceholder').hide();
