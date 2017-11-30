@@ -13,7 +13,7 @@
                     + "</td><td>" 
                     + "</td><td>" + course.active
                     + "</td><td>"
-                    + "</td><td>" + "<button type='button' class='btn btn-warning'data-id=" + "'"
+                    + "</td><td>" + "<button type='button' id='editButton' class='btn btn-warning'data-id=" + "'"
                     + course.id + "'" + ">Redigera</button>" + "</td></tr>");
               
 
@@ -39,7 +39,11 @@
 
                         
                         });
-
+                        // När du trycker på edit så ska koden skicka upp dig till 
+                        $("#editButton").click(function (e) {
+                        $('#courseDetailsPlaceholder').hide();
+                        $("html body").animate({ scrollTop: '0px' }, 1000);
+                    });
                       
                 });
                 
@@ -76,7 +80,7 @@
                                 + "</td><td>" + course.term
                                 + "</td><td>" + "<button type='button' class='btn btn-danger'data-id=" + course.active
                                 + ">Inaktiv</button>"
-                                + "</td><td>" + "<button type='button' class='btn btn-warning'data-id=" + "'"
+                                + "</td><td>" + "<button type='button' id='editButton' class='btn btn-warning'data-id=" + "'"
                                 + course.id + "'" + ">Redigera</button>" + "</td></tr>");
                         });
                     });
@@ -111,7 +115,7 @@
                                 + "</td><td>" + course.term
                                 + "</td><td>" + "<button type='button' class='btn btn-danger'data-id=" + course.active
                                 + ">Inaktiv</button>"
-                                + "</td><td>" + "<button type='button' class='btn btn-warning'data-id=" + "'"
+                                + "</td><td>" + "<button type='button' id='editButton' class='btn btn-warning'data-id=" + "'"
                                 + course.id + "'" + ">Redigera</button>" + "</td></tr>");
                         });
                     });
