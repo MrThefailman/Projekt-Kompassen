@@ -1,4 +1,7 @@
-﻿function Getstudents () {
+﻿function Getstudents() {
+
+    $('#searchStudentForm').hide();
+
     $.get("/api/students", "/api/courses", function (data) {
 
        $.each(data, function (i, student,  course) {
@@ -7,8 +10,8 @@
                     + "</td><td>" + "</td><td>" + courses.length + "<li>" + courses.Name + "<\/li>"
                     + "</td><td>" +
                     "</td><td>" +
-                    "<button type='button' class='btn btn-success btn-xs toggleButtonActive' >Aktiv</button>"
-                    + "</td><td>" + "<button type='button' class='btn btn-warning btn-xs'data-id=" + "'"
+                    "<button type='button' class='btn btn-success toggleButtonActive' >Aktiv</button>"
+                    + "</td><td>" + "<button type='button' class='btn btn-warning 'data-id=" + "'"
                     + "'" + ">Redigera</button>" + "</td></tr>");
 
            });

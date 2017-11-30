@@ -10,9 +10,7 @@
                     + course.credits + "</td><td>" + course.students.length
                     + "</td><td>" + course.year
                     + "</td><td>" + course.term
-                    + "</td><td>" 
                     + "</td><td>" + course.active
-                    + "</td><td>"
                     + "</td><td>" + "<button type='button' id='editButton' class='btn btn-warning'data-id=" + "'"
                     + course.id + "'" + ">Redigera</button>" + "</td></tr>");
               
@@ -34,7 +32,7 @@
                         $("#courseDetailsPlaceholder :input[name='active']").val(c.active);
 
                         // Fylla i Student rullen
-                        $("#courseDetailsStudentSelectList").append("<option>" + $(this).val("HEj") + "</option>");
+                        $("#courseDetailsStudentSelectList").append("<option>" + c.name + c.active + "</option>");
 
 
                         

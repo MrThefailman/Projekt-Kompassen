@@ -150,7 +150,7 @@
                     <th>Antal</th>
                     <th>År</th>
                     <th>Termin</th>
-                    <th>Aktiv</th>
+                    <th>Status</th>
                     <th>Redigera</th>
                     
                 </tr>
@@ -174,6 +174,7 @@
 
         @*The add new or edit student form*@
         <div class="panel-body">
+            <h4><span class="glyphicon glyphicon-plus no-hover"></span>&nbsp;Lägg till ny student</h4>
             <form id="studentListAddStudentForm">
                 <input type="hidden" name="id" value="0" />
                 <input type="hidden" name="active" value="false" />
@@ -206,7 +207,7 @@
         </div>
 
         @*The search*@
-        <div class="panel-body">
+        @*<div class="panel-body">
             <form id="searchStudentForm">
                 <div class="form-group form-input-container" style="float: left;">
                     <label>&nbsp;</label>
@@ -220,7 +221,7 @@
                     <button type="submit" class="btn btn-success">Sök</button>
                 </div>
             </form>
-        </div>
+        </div>*@
 
         @*The actual list of students*@
         <table id="studentListTable" class="table">
