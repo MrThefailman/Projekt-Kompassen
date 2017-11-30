@@ -28,6 +28,7 @@ namespace WU16.Kompassen.Web
                      "~/scripts/core/app.js",
                      "~/scripts/core/page.js",
                      "~/scripts/core/utilities.js",
+                     "~/scripts/core/student.js",
                       "~/scripts/core/start.js"));
                     
                     // "~/scripts/core/eventhandlers.js",
