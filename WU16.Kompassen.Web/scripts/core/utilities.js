@@ -16,15 +16,19 @@ $.fn.serializeObject = function () {
     return o;
 };
 function TopWindow() {
-    $("#editButton").click(function (e) {
-        $('#courseDetailsPlaceholder').hide();
-        $("html body").animate({ scrollTop: '0px' }, 1000);
-    });
+    
+        $("html, body").animate({ scrollTop: '0px' });
+    }
     // När du trycker på stäng döljs 
     $('#courseDetailsCancelButton').on('click', function (e) {
         $('#courseDetailsPlaceholder').hide();
     });
-}
+
+$(document).ready(function () {
+
+    
+
+});
 
 
 
