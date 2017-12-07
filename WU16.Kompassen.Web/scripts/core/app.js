@@ -61,25 +61,28 @@ $(document).ready(function () {
                             GetCourses();
                         }
                     });
-                    // Uppdate Course Button
-                    $("#courseDetailsForm").submit(function (e) {
-                        e.preventDefault();
-                        $.ajax({
-                            headers: {
-                                'Accept': 'application/json; charset=utf-8',
-                                'Content-Type': 'application/json; charset=utf-8'
-                            },
-                            'type': 'POST',
-                            'url': "/api/courses",
-                            'data': JSON.stringify($("#courseDetailsForm").serializeObject()),
-                            'success': function (data) {
-                                console.log(data);
-                                $(".courseList").empty();
-                                GetCourses();
-                            }
-                        
+                    
+                    
+            });
+            // Uppdate Course Button
+                $("#courseDetailsForm").submit(function (e) {
+                    e.preventDefault();
+
+                    $.ajax({
+                        headers: {
+                            'Accept': 'application/json; charset=utf-8',
+                            'Content-Type': 'application/json; charset=utf-8'
+                        },
+                        'type': 'POST',
+                        'url': "/api/courses",
+                        'data': JSON.stringify($("#courseDetailsForm").serializeObject()),
+                        'success': function (data) {
+                            console.log(data);
+                            $(".courseList").empty();
+                            GetCourses();
+                        }
+
                     });
-                });
             });
         });
         // GET för att hämta studenterna till dropdown-lista för kurs-fliken.
