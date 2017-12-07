@@ -3,10 +3,10 @@
     GetStudents();
     function GetStudents() {
         $.get("/api/students", function (data) {
-            $.each(data, function (i, Students) {
+            $.each(data, function (y, Students) {
                 var studentCourses = [];
                 var activeStudent = 0;
-                $.each(Students.courses, function (i, Courses) {
+                $.each(Students.courses, function (k, Courses) {
                     studentCourses.push(Courses.name);
                 });
                 if (Students.active === true) {
