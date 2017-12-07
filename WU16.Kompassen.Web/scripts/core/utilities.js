@@ -20,7 +20,7 @@ function TopWindow() {
         $("html, body").animate({ scrollTop: '0px' });
     }
     // När du trycker på stäng döljs 
-    $('#courseDetailsCancelButton').on('click', function (e) {
+    $('#courseDetailsCancelButton').on('click', function () {
         $('#courseDetailsPlaceholder').hide();
     });
 
