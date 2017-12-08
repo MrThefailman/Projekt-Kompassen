@@ -88,6 +88,7 @@ $('#courseDetailsStudentListPlaceholder').append('<p>' + this.firstName + " " + 
 });
 });
 TopWindow();
+
 });       
 } 
 });
