@@ -31,10 +31,6 @@ namespace WU16.Kompassen.Web
                      "~/scripts/core/utilities.js",
                        "~/scripts/core/student.js"));
 
-
-            // "~/scripts/core/eventhandlers.js",
-            // "~/scripts/core/waiting-dialog.js"
-
             bundles.Add(new StyleBundle("~/style/css").Include(
                       "~/style/bootstrap.css",
                       "~/style/site.css"));

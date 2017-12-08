@@ -1,5 +1,4 @@
 ﻿// Function for POST
-
 $.fn.serializeObject = function () {
     var o = {};
     var a = this.serializeArray();
@@ -15,23 +14,14 @@ $.fn.serializeObject = function () {
     });
     return o;
 };
-function TopWindow() {
-    
-        $("html, body").animate({ scrollTop: '0px' });
-    
-    // När du trycker på stäng döljs 
 
+function TopWindow() {
+    // Användaren hamnar på toppen av webbläsaren   
+    $("html, body").animate({
+        scrollTop: '0px'
+    });
+    // När du trycker på stäng döljs 
     $('#courseDetailsCancelButton').on('click', function () {
         $('#courseDetailsPlaceholder').hide();
     });
-
 }
-$(document).ready(function () {
-
-    
-
-});
-
-
-
-
