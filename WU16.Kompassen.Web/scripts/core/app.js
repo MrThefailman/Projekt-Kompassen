@@ -112,7 +112,8 @@ headers: {
 'data': JSON.stringify($("#courseListAddCourseForm").serializeObject()),
 'success': function (data) {
 console.log(data);
-//$("#courseListTable").empty();
+$(".courseList").empty();
+$('#courseListPlaceholder').show();
 GetCourses();
 }
 });
@@ -138,8 +139,6 @@ GetCourses();
 });
 });
 TopWindow();
-
-       
 } 
 });
 
